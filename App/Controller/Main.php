@@ -66,8 +66,8 @@ class Main {
 			return;
 		}
 
-		wp_enqueue_style( WDRT_PLUGIN_SLUG . '-admin', WDRT_PLUGIN_URL . 'Assets/Admin/Css/wdrt-admin.css', [], WDRT_PLUGIN_VERSION );
-		wp_enqueue_script( WDRT_PLUGIN_SLUG . '-admin', WDRT_PLUGIN_URL . 'Assets/Admin/Js/wdrt-admin.js', [ 'jquery' ], WDRT_PLUGIN_VERSION, true );
+		wp_enqueue_style( WDRT_PLUGIN_SLUG . '-admin', WDRT_PLUGIN_URL . 'Assets/Css/wdrt_admin.css', [], WDRT_PLUGIN_VERSION );
+		wp_enqueue_script( WDRT_PLUGIN_SLUG . '-admin', WDRT_PLUGIN_URL . 'Assets/Js/wdrt_admin.js', [ 'jquery' ], WDRT_PLUGIN_VERSION, true );
 
 		wp_localize_script( WDRT_PLUGIN_SLUG . '-admin', 'wdrt_localize_data', [
 			'ajax_url' => admin_url( 'admin-ajax.php' ),
