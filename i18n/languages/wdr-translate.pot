@@ -1,22 +1,22 @@
-# Copyright (C) 2024 Flycart
+# Copyright (C) 2026 Flycart
 # This file is distributed under the GPL v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Woo Discount Rules - Multi-Lingual Compatibility - Dynamic Strings 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo_discount_translate\n"
+"Project-Id-Version: Discount rules : Translation compatibility 1.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wdr-translate\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-06-05T11:00:49+00:00\n"
+"POT-Creation-Date: 2026-10-06T13:39:26+05:30\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.10.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: wdr-translate\n"
 
 #. Plugin Name of the plugin
 #: wdr-translate.php
-msgid "Woo Discount Rules - Multi-Lingual Compatibility - Dynamic Strings"
+msgid "Discount rules : Translation compatibility"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -27,7 +27,7 @@ msgstr ""
 
 #. Description of the plugin
 #: wdr-translate.php
-msgid "This add-on used to translate dynamic string for Woo Discount Rules and related add-on."
+msgid "Useful to translate dynamic strings. Supported translation plugins: WPML and Loco Translate."
 msgstr ""
 
 #. Author of the plugin
@@ -35,35 +35,80 @@ msgstr ""
 msgid "Flycart"
 msgstr ""
 
-#: App/Controller/Main.php:229
-msgid "WPML string translation plugin is not activated."
+#: App/Controller/Main.php:76
+msgid "Updating..."
 msgstr ""
 
-#: App/Controller/Main.php:235
-msgid "Security check validation failed"
+#: App/Controller/Main.php:77
+msgid "Something went wrong, please try again."
 msgstr ""
 
-#: App/Controller/Main.php:239
-msgid "WPML translation action not found"
+#: App/Controller/Main.php:123
+msgid "WPML String Translation plugin is not activated."
 msgstr ""
 
-#: App/Controller/Main.php:255
-msgid "Update WPML translation successfully"
+#: App/Controller/Main.php:128
+msgid "Security check validation failed."
 msgstr ""
 
-#: App/Views/Admin/main.php:17
-msgid "Loco Translate:"
+#: App/Controller/Main.php:133
+msgid "WPML translation action not found."
+msgstr ""
+
+#: App/Controller/Main.php:147
+msgid "Updated WPML translation strings successfully."
+msgstr ""
+
+#. translators: %1$s: plugin name, %2$s: minimum PHP version
+#: App/Helper/Plugin.php:42
+#, php-format
+msgid "%1$s requires minimum PHP version %2$s"
+msgstr ""
+
+#. translators: %1$s: plugin name, %2$s: minimum WordPress version
+#: App/Helper/Plugin.php:50
+#, php-format
+msgid "%1$s requires minimum WordPress version %2$s"
+msgstr ""
+
+#. translators: %s: plugin name
+#: App/Helper/Plugin.php:58
+#, php-format
+msgid "%s requires WooCommerce and Woo Discount Rules to be installed and active."
+msgstr ""
+
+#. translators: %1$s: plugin name, %2$s: minimum WooCommerce version
+#: App/Helper/Plugin.php:66
+#, php-format
+msgid "%1$s requires minimum WooCommerce version %2$s"
+msgstr ""
+
+#. translators: %s: plugin name
+#: App/Helper/Plugin.php:74
+#, php-format
+msgid "%s requires Woo Discount Rules to be running in v3 mode."
 msgstr ""
 
 #: App/Views/Admin/main.php:20
+msgid "Loco Translate"
+msgstr ""
+
+#: App/Views/Admin/main.php:23
+msgid "Discount Rules' dynamic content - rule titles, descriptions, cart labels and promotion messages - is automatically offered for translation whenever Loco Translate scans this site."
+msgstr ""
+
 #: App/Views/Admin/main.php:28
-msgid "You can now translate the dynamic content like rules title, descriptions easily."
+msgid "WPML String Translation"
 msgstr ""
 
-#: App/Views/Admin/main.php:25
-msgid "WPML Translate:"
+#: App/Views/Admin/main.php:32
+msgid "Register Discount Rules' dynamic content with WPML String Translation so it can be translated."
 msgstr ""
 
-#: App/Views/Admin/main.php:33
-msgid "Update Dynamic String for WPML"
+#: App/Views/Admin/main.php:35
+msgid "Update Dynamic Strings for WPML"
+msgstr ""
+
+#: App/Views/Admin/main.php:39
+msgid "WPML String Translation is not active. Activate it to register Discount Rules' dynamic content for translation."
 msgstr ""

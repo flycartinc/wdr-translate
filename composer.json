@@ -10,6 +10,7 @@
     }
   ],
   "require": {
+    "php": ">=7.4",
     "yahnis-elsts/plugin-update-checker": ">=v5.0"
   },
   "autoload": {
