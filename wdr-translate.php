@@ -54,8 +54,8 @@ if ( ! class_exists( \WDRT\App\Router::class ) || ! class_exists( \WDRT\App\Setu
 
 // Plugin updates: runs unconditionally so existing installs keep receiving updates even while
 // WooCommerce / Discount Rules are inactive.
-if ( class_exists( \YahnisElsts\PluginUpdateChecker\v5\PucFactory::class ) ) {
-	$wdrt_update_checker = \YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+if ( class_exists( \YahnisElsts\PluginUpdateChecker\v6\PucFactory::class ) ) {
+	$wdrt_update_checker = \YahnisElsts\PluginUpdateChecker\v6\PucFactory::buildUpdateChecker(
 		'https://github.com/flycartinc/woo_discount_translate',
 		__FILE__,
 		'wdr-translate'
