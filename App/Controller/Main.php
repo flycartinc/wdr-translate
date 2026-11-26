@@ -2,6 +2,7 @@
 
 namespace WDRT\App\Controller;
 
+use WDR\Core\Controllers\Admin\AddOn;
 use WDR\Core\Helpers\Input;
 use WDR\Core\Helpers\Util;
 use WDR\Core\Helpers\WC;
@@ -287,23 +288,23 @@ class Main {
 	}
 
 	/**
-	 * Add the sibling Discount Rules add-ons' own display name/description strings.
+	 * Add the add-ons' names and descriptions as Discount Rules' Add-ons screen shows them (`AddOn::getList()`, the catalog it
+	 * caches a day); the screen translates them with `__()` in the woo-discount-rules domain.
 	 *
 	 * @param array $new_custom_strings Custom strings, by reference.
 	 *
 	 * @return void
 	 */
 	private static function getAddOnStrings( array &$new_custom_strings ) {
+		$strings = [];
+		if ( class_exists( AddOn::class ) ) {
+			foreach ( AddOn::getList() as $addon ) {
+				$strings[] = $addon['name'];
+				$strings[] = $addon['description'];
+			}
+		}
 		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- wdrt_ is this addon's own public hook prefix
-		$allowed_strings = apply_filters( 'wdrt_addons_string_list', [
-			'Woo Discount Translate', 'This add-on used to translate dynamic string for Woo Discount Rules and related add-on.',
-			'Woo wholesale price compatibility', 'This add-on used to give compatibility of woocommerce wholesale prices by rymerawebco.',
-			'Woo extra product compatibility', 'This add-on used to give compatibility of woocommerce extra product option by themehigh.',
-			'OnSale Page', 'Create On-sale Page products using rule based show the on-sale product.',
-			'Woo facebook product price compatibility', 'This add-on used to give compatibility of woocommerce facebook product prices by facebook.',
-			'Woo country based price compatibility', 'This add-on used to give compatibility of woocommerce country based prices by oscargare.',
-		] );
-		foreach ( $allowed_strings as $string ) {
+		foreach ( (array) apply_filters( 'wdrt_addons_string_list', $strings ) as $string ) {
 			$new_custom_strings[] = $string;
 		}
 	}
